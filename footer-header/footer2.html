@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <style> 
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        footer{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+            background-color: black;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            color: aliceblue;
+        }
+
+        .Child{
+             display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+       .section_title{
+        margin-bottom: 15%;
+        color: blue;
+        font-size: 20px;
+        font-weight: 600;
+       }
+       .menu_item{
+        cursor: pointer;
+       }
+       .menu_item:hover{
+        color: brown;
+       }
+
+
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <footer>
+        <section>
+            <span class="section_title">Brand1</span>
+            <div class="Child">
+            <span class="menu_item">Boy1</span>
+            <span class="menu_item">Boy1</span>
+            <span class="menu_item">Boy1</span>
+            </div>
+        </section>
+         <section>
+            <span class="section_title">Brand2</span>
+            <div class="Child">
+            <span class="menu_item">Boy21</span>
+            <span class="menu_item">Boy22</span>
+            <span class="menu_item">Boy23</span>
+            </div>
+        </section>
+         <section>
+            <span class="section_title">Brand3</span> 
+            <div class="Child">
+            <span class="menu_item">Boy31</span>
+            <span class="menu_item">Boy32</span>
+            <span class="menu_item">Boy33</span>
+            </div>
+        </section>
+         <section>
+            <span class="section_title">Brand4</span> 
+            <div class="Child">
+            <span class="menu_item">Boy41</span>
+            <span class="menu_item">Boy42</span>
+            <span class="menu_item">Boy43</span>
+            </div>
+        </section>
+
+
+
+
+
+    </footer>
+    
+</body>
+</html>

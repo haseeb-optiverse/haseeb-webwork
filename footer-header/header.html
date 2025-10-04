@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 12px 30px 12px 30px;
+    }
+
+
+    .text{
+        font-size: 15px;
+        font-weight: 500;
+        color: aliceblue;
+    }
+
+
+    #menu{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .menu_item{
+        cursor: pointer;
+    }
+
+    .menu_item:hover{
+        color: blue;
+    }
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    <header class="header">
+        <span class="text">Logo</span>
+        <ul id="menu">
+            <li class="text menu_item">About</li>
+            <li class="text menu_item">Home</li>
+            <li class="text menu_item">Contect Us</li>
+            <li class="text menu_item">Our Team</li>
+        </ul>
+
+    </header>
+</body>
+</html>

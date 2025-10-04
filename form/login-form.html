@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <h1 style="font-size: 20px; color: blue; font-weight: 600; text-align: center;">Login Form</h1>
+
+    <form onsubmit="onView()">
+        <label for="username">Username</label>
+        <input type="text" placeholder="john123" id="username" name="username">
+        <label for="password">Password</label>
+        <input type="password" placeholder="5564564" id="password" name="password">
+
+        <button type="submit">Login</button>
+
+        <script>
+
+            var userName = document.getElementById("username");
+            var password = document.getElementById("password");
+
+            function onView() {
+                event.preventDefault();
+                console.log("username:", userName.value)
+                console.log("password:", password.value)
+            }           
+
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>footer</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .footer{
+            background-color: #113d3c;
+            padding: 70px 0;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+           margin-left: 30px;
+           
+           gap: 80px;
+        }
+       ul{
+        list-style: none;
+        color: #f7f2f0;
+       }
+       .color{
+        color: #f7f2f0;
+       }
+       .footer-col{
+    width: 25%;
+    padding: 0 15px;
+    
+}
+        
+      .terms{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+       background-color: #d79936;
+      }
+
+.header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #d79936;
+        padding: 12px 30px 12px 30px;
+    }
+
+
+    .text{
+        font-size: 15px;
+        font-weight: 500;
+        color: black;
+    }
+
+
+    #menu{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .menu_item{
+        cursor: pointer;
+    }
+    .menu_item:hover{
+        color: brown;
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <span class="text">Logo</span>
+        <ul id="menu">
+            <li class="text menu_item">About</li>
+            <li class="text menu_item">Home</li>
+            <li class="text menu_item">Contect Us</li>
+            <li class="text menu_item">Our Team</li>
+        </ul>
+        <span class="text">Login</span>
+    </header>   
+    <section style="position: absolute; bottom: 0; width: 100%;">
+        <footer class="footer">
+         
+        <div class="container">
+           <div class="footer-col">
+                <h3>ATARAXIS</h3>
+            
+                    <p>this is ATARAXIS company come and join it</p>
+
+            <button style="margin-top: 10px; border: none; padding: 10px 20px;">
+                Back to top
+            </button>
+             
+            </div>
+            <div class="footer-col">
+                <h4>SiteMap</h4>
+                <ul>
+                    <li><a class="color menu_item" href="#">homepage</a></li>
+                    <li><a class="color menu_item" href="#">technology</a></li>
+                    <li><a class="color menu_item" href="#">contact us</a></li>
+                    <li><a class="color menu_item" href="#">follow</a></li>
+                    <li><a class="color menu_item" href="#">phone</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a class="color menu_item" href="#">privacy policy</a></li> 
+                    <li><a class="color menu_item" href="#">terms of services</a></li>
+                    <li><a class="color menu_item" href="#">shop</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <div class="terms">@2025 this is footer</div>
+    </section>
+</body>
+</html>
