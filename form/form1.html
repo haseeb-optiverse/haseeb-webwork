@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    section {
+        background-color: pink;
+        border: none;
+        border-radius: 8px;
+        padding: 25px 40px;
+        width: 500px;
+    }
+
+    h1 {
+        text-align: center;
+        
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    form div {
+        margin-bottom: 12px;
+    }
+
+    label {
+        display: inline-block;
+        width: 130px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select {
+        padding: 5px;
+        border:none;
+        border-radius: 4px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .name input {
+        width: 80px;
+    }
+
+    .birth input {
+        width: 50px;
+        text-align: center;
+    }
+
+     .dept {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+   
+
+    
+    button {
+       display: block;
+        background-color: #bbb5b8;
+        color: #363535;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 15px auto 0;
+    }
+
+    button:hover {
+        background-color: #2e0cec;
+    }
+</style>
+</head>
+<body>
+
+<section>
+    <h1>Student Registration Form</h1>
+    <form>
+        <div>
+            <label>Roll No.:</label>
+            <input type="text" placeholder="Enter Roll Number">
+        </div>
+
+        <div class="name">
+            <label>Student Name:</label>
+            <input type="text" placeholder="First Name"> -
+            <input type="text" placeholder="Last Name">
+        </div>
+
+        <div>
+            <label>Father's Name:</label>
+            <input type="text" placeholder="Father's Name">
+        </div>
+
+        <div class="birth">
+            <label>Date of Birth:</label>
+            <input type="number" placeholder="DD"> -
+            <input type="text" placeholder="MM"> -
+            <input type="number" placeholder="YYYY">
+            <small>(DD-MM-YYYY)</small>
+        </div>
+
+        <div>
+            <label>Mobile No.:</label>
+            <input type="text" value="+92" readonly style="width:40px; text-align:center;">
+            <input type="tel" placeholder="Enter number">
+        </div>
+
+        <div>
+            <label>Email ID:</label>
+            <input type="email" >
+        </div>
+
+        <div>
+            <label>Password:</label>
+            <input type="password" placeholder="Password">
+        </div>
+
+        <div>
+            <label>Gender:</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+        </div>
+
+        <div class="dept">
+            <label>Department:</label>
+            <input type="checkbox"> CSE
+            <input type="checkbox"> IT
+            <input type="checkbox"> ECE
+            <input type="checkbox"> Civil
+            <input type="checkbox"> Mech
+        </div>
+
+        <div>
+            <label>Course:</label>
+            <select>
+                <option>-- Select Current Course --</option>
+                <option>haseeb 1</option>
+                <option>haseb 2</option>
+                <option>haseb 3</option>
+                <option>haseb 4</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Student Photo:</label>
+            <input type="file">
+        </div>
+
+        <div>
+            <label>City:</label>
+            <input type="text">
+        </div>
+
+        <div>
+            <label>Address:</label>
+            <input type="text" >
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+</body>
+</html>
