@@ -46,6 +46,12 @@
     input[type="email"],
     input[type="password"],
     input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    input[type="search"],
+    input[type="color"],
+    input[type="range"],
+    input[type="hidden"],
     select {
         padding: 5px;
         border:none;
@@ -69,8 +75,6 @@
         flex-wrap: wrap;
         gap: 5px;
     }
-   
-
     
     button {
        display: block;
@@ -174,7 +178,30 @@
             <label>Address:</label>
             <input type="text" >
         </div>
-
+        <div>
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time">
+        </div>
+        <div>
+            <label for="search">Search-qurey</label>
+            <input type="search" id="search" name="search">
+        </div> 
+        <div>
+            <label for="color">Fav. Color</label>
+            <input type="color" id="color" name="color">
+        </div>
+        <div>
+            <label for="url">Web</label>
+            <input type="url" id="url" name="url">
+        </div>
+        <div>
+            <label for="range">Volume</label>
+            <input type="range" id="range" name="range" style="cursor: pointer;">
+        </div>
+        <div>
+            <label for="hidden">User ID</label>
+            <input type="hidden" id="hidden" name="hidden">
+        </div>
         <button type="submit">Register</button>
     </form>
 </section>
