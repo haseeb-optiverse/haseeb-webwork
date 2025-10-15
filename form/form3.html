@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+      color: white;
+    }
+
+    .contact-form {
+      background-color: #2E4A3F;
+      padding: 30px;
+      border-radius: 15px;
+      width: 350px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      margin-top: 5px;
+      background-color: #3E5C50;
+      color: white;
+      cursor: pointer;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0e0f0f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      
+    }
+
+    button:hover {
+      background-color: #45a049;
+      box-shadow:0px 0px 20px white;   
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social img {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-form">
+    <form>
+      <label>Full Name</label>
+      <input type="text" name="fullname">
+
+      <label>Phone Number</label>
+      <input type="text" name="phone">
+
+      <label>Email</label>
+      <input type="email" name="email">
+
+      <label>Subject</label>
+      <input type="text" name="subject">
+
+      <label>Message</label>
+      <textarea name="message"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="note">Contact with other devices?</div>
+    <div class="social">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook"></a>
+    </div>
+  </div>
+</body>
+</html>
