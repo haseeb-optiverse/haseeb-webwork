@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      section {
+        width: 1000px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-items: center;
+        margin-top: 20px;
+      }
+        .container2 {
+             display: grid; 
+             grid-template-columns: repeat(3, 1fr);
+              gap: 20px;
+        }
+      .container3 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .img_box {
+        width: 100%;
+     }
+     .img_box img {
+       width: 100%;
+       height: 150px;
+       border-radius: 8px;
+   }
+
+
+      h1,
+      h2 {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h4,
+      h6 {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .Services {
+        border: 1px solid #ccc;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border-collapse: none;
+      }
+
+      .service_card {
+        background-color: #bdc4ca;
+        padding: 10px 15px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+
+
+
+
+      @media screen and (max-width: 700px) {
+        section {
+          width: 90%;
+          
+        }
+
+        .container {
+         grid-template-columns: repeat(2, 1fr);
+        }
+        .container2 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .container3 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media screen and (max-width: 500px) {
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .container2 {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .container3 {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Standorte & regionale Präsenz</h1>
+      <p>
+        Mit Standorten und Teams in zahlreichen Regionen der Schweiz, sind wir
+        nahe bei Ihnen und immer einsatzbereit.
+      </p>
+      <div class="container">
+        <div class="img_box"  style="position: relative;">
+        <img
+          src="file1.jpg"
+          alt="Image1"                 
+        />
+          <div style="position: absolute;
+           bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            width: 90%;">
+              <span style="color: #000">BERN</span>
+            </div>
+          </div>
+             
+            
+      <div class="img_box"  style="position: relative;">
+        <img
+          src="file2.jpg"
+          alt="Image2"          
+        />
+         <div style="position: absolute;
+           bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            width: 90%;">
+              <span style="color: #000">AARGAU</span>
+            </div>
+        </div>
+
+        <div class="img_box"  style="position: relative;">
+        <img
+          src="file3.jpg"
+          alt="Image3"        
+        />
+         <div style="position: absolute;
+           bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            width: 90%;">
+              <span style="color: #000">BASEL</span>
+            </div>
+          </div>
+
+         <div class="img_box"  style="position: relative;">
+        <img
+          src="file4.jpg"
+          alt="Image4"         
+        />
+         <div style="position: absolute;
+           bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            width: 90%;">
+              <span style="color: #000">SOLOTHURN</span>
+            </div>
+          </div>
+
+          <div class="img_box"  style="position: relative;">
+        <img
+          src="file5.jpg"
+          alt="Image5"        
+        />
+         <div style="position: absolute;
+           bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            width: 90%;">
+              <span style="color: #000">LUZERN</span>
+            </div>
+            </div>
+
+          <div class="img_box"  style="position: relative;">
+        <img
+          src="file6.jpg"
+          alt="Image6"
+        />
+         <div style="position: absolute;
+           bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            width: 90%;">
+              <span style="color: #000">ZURICH</span>
+            </div>
+          </div>
+      </div>
+
+      <div style="margin: 20px 0">
+        <h2>Unsere Services - alles vom Fuchs aus einer Hand</h2>
+        <p>
+          Van Umzug bis Schware: Entdecken Sie unsere Vielfalt an Services und
+          Lösungen
+        </p>
+      </div>
+      <div
+       class="container2"
+      >
+        <div class="Services">
+          <img src="file7.jpg" alt="Image7" width="90px" height="70px" />
+          <h4>Abbruchfuchs</h4>
+          <p><small> Abbruchsicher, sauber und effizient</small></p>
+        </div>
+        <div class="Services">
+          <img src="file8.jpg" alt="Image8" width="90px" height="70px" />
+          <h4>Umzugfuchs</h4>
+          <p><small> Stressfrei umziehen mit den Profis</small></p>
+        </div>
+        <div class="Services">
+          <img src="file9.png" alt="Image9" width="90px" height="70px" />
+          <h4>Schraubfuchs</h4>
+          <p><small> Möbelmontage vom Fachmann</small></p>
+        </div>
+        <div class="Services">
+          <img src="file10.jpg" alt="Image10" width="90px" height="70px" />
+          <h4>Entrümpelfuchs</h4>
+          <p><small> Schnell, sauber, zuverlässig</small></p>
+        </div>
+        <div class="Services">
+          <img src="file11.jpg" alt="Image11" width="90px" height="70px" />
+          <h4>Reinigungsfuchs</h4>
+          <p><small> Glänzende Sauberkeit für Ihr Zuhause</small></p>
+        </div>
+        <div class="Services">
+          <img src="file12.png" alt="Image12" width="90px" height="70px" />
+          <h4>Montagefuchs</h4>
+          <p><small> Fachgerechte Montage vom Profi</small></p>
+        </div>
+      </div>
+
+      <div style="margin: 20px 0">
+        <h2>Warum Fuchs Services wählen</h2>
+        <p>
+          <small
+            >Von Umzug his Software: Entdecken Sie unser breites Spektrum an
+            Dienstleistungen und Lösungen.</small
+          >
+        </p>
+        <div class="container3">
+          <div class="service_card">
+            <img src="file13.jpg" alt="Image13" width="20px" height="20px" />
+            <h6>Schweizer Qualität & Verlässlichkeit</h6>
+            <p>
+              <small
+                >FuchsServices vereint neun Fachbereiche ... Qualität und
+                Vertrauen.</small
+              >
+            </p>
+          </div>
+          <div class="service_card">
+            <img src="file14.jpg" alt="Image14" width="20px" height="20px" />
+            <h6>Alles aus einer Hand</h6>
+            <p>
+              <small>Neun Fachbereiche, ein Ansprechpartner nahtlose .</small>
+            </p>
+          </div>
+          <div class="service_card">
+            <img src="file15.jpg" alt="Image15" width="20px" height="20px" />
+            <h6>Faire & transparente Preise</h6>
+            <p>
+              <small
+                >Unsere Preise sind klar, fair und ohne versteckte
+                Kosten.</small
+              >
+            </p>
+          </div>
+          <div class="service_card">
+            <img src="file16.jpg" alt="Image16" width="20px" height="20px" />
+            <h6>Nachhaltigkeit & Umweltbewusstsein</h6>
+            <p>
+              <small
+                >Wir setzen auf umweltfreundliche Praktiken ...
+                Verantwortung.</small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
