@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 500;
+           font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th, td{
+            padding: 15px 18px;
+            border-bottom: 3px solid #ccc;
+        }
+        
+        .icon{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .icon img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .email{
+            font-weight: bold;
+        }
+        .date{
+            font-size: small;
+            color: #666;
+        }
+        td{
+            cursor: pointer;
+        }
+        td:hover {
+            background-color: #0982ec;
+            border-radius: 10px;
+        }
+        .active{
+            color: green;
+            font-weight: bold;
+            
+        }
+        .waiting{
+            color: orange;
+            font-weight: bold;
+        }
+        tr:hover{
+            background-color: #f2f2f2;
+        }
+        .x{
+            color: red;
+            font-weight: bold;
+       
+        }
+        </style>
+</head>
+<body>
+    <section>
+
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> 
+                    <div class="icon">
+                     <img src="image1.png" alt="image1">
+                     <div>
+                   <div class="email">markotto@email.com</div>
+                   <div class="date">Added: 01/03/2020</div>
+                  </div>
+                 </div>
+                </td>
+                <td>Markotto89</td>
+                <td class="active">Active</td>
+                <td class="x">x</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="icon">
+                      <img src="image1.png" alt="Image2">
+                      <div>
+                       <div class="email">jacobthornton@email.com</div>
+                        <div class="date">Added: 01/03/2020</div>
+                         </div>
+                         </div>      
+                </td>
+                <td>jacobthornton</td>
+                <td class="waiting"> Waiting for Reassignment</td>
+                <td class="x">x</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                 <td>
+                     <div class="icon">
+                       <img src="image1.png" alt="image3">
+                     <div>
+                      <div class="email">larrybird@email.com</div>
+                     <div class="date">Added: 01/03/2020</div>
+                   </div>
+                   </div>
+                 </td>
+                 <td>larry_bird</td>
+                 <td class="active">Active</td>
+                 <td class="x">x</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                 <td>
+                    <div class="icon">
+                  <img src="image1.png" alt="image4">
+                  <div>
+                  <div class="email">johndoe@email.com</div>
+                 <div class="date">Added: 01/03/2020</div>
+                 </div>
+                   </div>
+              </td>
+                 <td>Johndoe1990</td>
+                 <td class="active"> Active</td>
+                <td class="x">x</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                 <td>
+                     <div class="icon">
+                     <img src="image1.png" alt="image5">
+                       <div>
+                      <div class="email">garybird@email.com</div>
+                    <div class="date">Added: 01/03/2020</div>
+                 </div>
+                 </div>
+             </td>
+                 <td>garybird-2020</td>
+                 <td class="waiting"> Waiting for Reassignment</td>
+                 <td class="x">x</td>
+            </tr>
+            </tbody>
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+    </section>
+</body>
+</html>
