@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is JavaScript</h1>
+    <p> Mit Standorten und Teams in zahlreichen Regionen der Schweiz, sind wir
+        nahe bei Ihnen und immer einsatzbereit. is par click karnay sa hamray pas us page ka print a jay ga</p>
+
+    <button type="button" onclick="window.print()"> click it</button>
+
+    <p id="date"> now show the exact time of pakistan</p>
+    <button onclick="displayDate();
+      this.style.backgroundColor = 'blue';
+      this.style.color ='white';"
+  >Click it</button>
+
+
+      <p>Now we change the Image</p>
+      <button onclick="document.getElementById('myImage') .src='file1.jpg'">Change Image</button>
+      <img id="myImage" src="file1.jpg" .style="100px">
+      <button onclick="document.getElementById('myImage') .src='file3.jpg'">Change Image</button>
+
+
+    <p>hi I am Haseeb  document. write likhnay sa ya click karnay 
+        sa html delete ho jata ha ya sirf testing ka liya istamal hoti ha
+    </p>
+    <button type="button" onclick="document.write(7+7)">try this</button>
+ <script>
+function displayDate() {
+  document.getElementById("date").innerHTML = Date();
+}
+</script>
+
+</body>
+</html>

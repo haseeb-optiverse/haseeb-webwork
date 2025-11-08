@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First JS Page</title>
+</head>
+<body>
+  <h2>Hi I am Haseeb</h2>
+  <p>This is my first JavaScript code running in the browser</p>
+  <p id="change">Hi its me Haseeb</p>
+ <button 
+  type="button" 
+ 
+  onclick='
+    document.getElementById("change").innerHTML = "Hello JavaScript!"; 
+    this.style.backgroundColor = "lightgreen";
+    this.style.color = "white";'>
+  Click Me!
+</button>
+<p id="paragraph">new paragraph</p>
+ 
+<button type="button" onclick="myfunction()">click</button>
+  <script>
+   function myfunction() {
+    document.getElementById("paragraph").style.fontSize ="35px";
+   }
+   
+    alert("My name is Haseeb! JavaScript is working ");
+
+   
+     console.log("this is my console");
+
+  
+    let name = "Haseeb";
+    let age = 18;
+    console.log("Name: " + name);
+    console.log("Age: " + age);
+   
+  </script>
+</body>
+</html>
+
