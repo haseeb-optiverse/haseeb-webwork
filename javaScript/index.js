@@ -137,10 +137,10 @@ let size = 0;
  console.log(output); */
 
  //Arrays
- 
+ /*
  let fruits = ["Mango", "Banana", "Apple", "Orange"]; 
   console.log(fruits);
-  console.log(fruits[2]); 
+  console.log(fruits[2]); */
    
   //Array Methods 
   /*
@@ -149,3 +149,33 @@ let size = 0;
   // push method
   fruits.push("Grapes");
   console.log(fruits); */
+
+  // pop method 
+  /*
+  let fruits = ["Mango", "Banana", "Apple", "Orange"];
+  fruits.pop();
+  console.log(fruits); */
+
+  // shift method
+  /*
+  let fruits = ["Mango", "Banana", "Apple", "Orange"];
+  fruits.shift();
+  console.log(fruits); */
+
+  // unshift method 
+  /*
+  let fruits = ["Mango", "Banana", "Apple", "Orange"];
+  fruits.unshift("Pineapple");
+  console.log(fruits); */
+   
+  // splice method
+/*
+  let fruits = ["Mango", "Banana", "Apple", "Orange"];
+  fruits.splice(2, 1, "Pineapple", "Grapes");
+  console.log(fruits); */ 
+
+  // slice method
+ /*
+  let fruits = ["Mango", "Banana", "Apple", "Orange"];
+  let citrus = fruits.slice(1, 3);
+  console.log(citrus); */
