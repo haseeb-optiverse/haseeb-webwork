@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Laptop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #356d46;
+        
+        padding: 12px 30px 12px 30px;
+    }
+    .text{
+        font-size: 15px;
+        font-weight: 500;
+        color: white;
+    }
+    #menu{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    } 
+    .menu_item{
+        cursor: pointer;
+    }
+     .fa-solid{
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .heading{
+        width: 50%;
+        margin: 40px 20px;
+    }
+    .heading h4{
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .heading2{
+          margin: 40px 20px;
+    }
+    .heading2 h4{
+          font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .heading2 button{
+        padding: 10px 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        background-color: #356d46;
+        color: white;
+        border-radius: 5px;       
+    }
+    .heading2 button:hover{
+        background-color: #0ebdb4;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .inner-container{
+        width: 100%;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .inner-container img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    .inner-container h2{
+        padding-bottom: 20px;
+    }
+    .inner-container button{
+          padding: 10px 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        background-color: #356d46;
+        color: white;
+        border-radius: 5px;  
+    }
+    input{
+        width: 50%;
+        background-color: #0ebdb4;
+        color: white;
+         padding: 10px 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-left: 15px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    .devices{
+        margin: 40px 20px;
+        text-align: center;
+    }
+    .devices h4{
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .devices span{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .devices p{
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .devices p:hover{
+        color: #0ebdb4;
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: 20px;
+    }
+    .inner-container2{
+        width: 100%;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .inner-container2 img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    .inner-container2 button{
+          padding: 10px 20px;
+        margin-right: 20px;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        background-color: #356d46;
+        color: white;
+        border-radius: 5px;  
+    }
+    .container3{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 40px 20px;
+        align-items: center;
+    }
+    .inner-container3{
+        width: 100%;
+        padding: 20px;
+    }
+    .inner-container3 h4{
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .inner-container3 button{
+          padding: 10px 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        background-color: #356d46;
+        color: white;
+        border-radius: 5px;  
+    }
+      .container4{
+            display: flex;
+            justify-content: space-between;
+            gap: 150px;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            height: 100%;
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+            .footer-col{
+         padding: 20px;
+        } 
+            .footer-col h2{
+            margin-bottom: 30px;
+            }
+        
+            ul{
+            list-style: none;  
+            padding: 0;         
+        }
+        a{
+            text-decoration: none;
+           color: white;
+        }
+        a:hover{
+          color: #3cb8f1;
+        }
+        
+        .logo{
+        
+            margin-top: 15px;
+             display: flex;
+             justify-content: center; 
+              align-items: center;      
+               gap: 15px;                
+
+        }
+        .logo img {
+              width: 35px;     
+              height: 35px;
+              border-radius: 50%;  
+        }
+        h4{
+            padding-bottom: 15px;
+            color: #009688;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <span class="text">Logo</span>
+        <ul id="menu">
+            <li class="text menu_item">About</li>
+            <li class="text menu_item">Home</li>
+            <li class="text menu_item">Contect Us</li>
+            <li class="text menu_item">Our Team</li>
+            <li class="text menu_item">Services</li>
+            <li class="text menu_item">Cart</li>
+        </ul>
+       <i class="fa-solid fa-bag-shopping"></i>
+    </header> 
+    <section>
+        <div class="heading">
+        <h4>Explore Our Collection</h4>
+        <p>From elegant 3-piece suits to high-performance electronics, find everything you need in one place. 
+           Browse our latest collection and enjoy quality, comfort, and unbeatable value.</p>
+        </div>
+
+        <div class="heading2">
+            <h4>Shop Our Products</h4>
+            <p>Choice us</p>
+            <button>Electronic</button>
+            <button>Clothing</button>
+        </div>
+
+        <div class="container">
+            <div class="inner-container">
+                <img src="download.jpg" alt="photos">
+                <h2>Sony Alpha a7 IV</h2>
+                <p>Full-frame Mirror-free camera with excellent image quality and video features.</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="inner-container">
+                <img src="download (1).jpg" alt="photos">
+                <h2>TCL 5-Series (S535) 55inch</h2>
+                <p>Premium QLED color and Dolby Vision at an affordable price. Smart TV features powered by Roku.</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="inner-container">
+                <img src="download (2).jpg" alt="photos">
+                <h2>Sony Alpha a7 IV precio</h2>
+                <p>Full-frame Mirror-free camera with excellent image quality and video features.</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+         <div>
+                <input type="search" placeholder="Search...">
+            </div>
+
+        <div class="devices">
+            <h4>Electronic Items Categories</h4>
+            <span>
+                <p>Laptops</p>
+                <p>Mobile Phones</p>
+                <p>Cameras</p>
+                <p>Televisions</p>
+                <p>Headphones</p>
+                <p>Smart Watches</p>
+            </span>
+        </div>
+
+       
+            <h2 style="margin-left: 20px;">DELL CORE I 5</h2>
+             <div class="container2">
+            <div class="inner-container2">
+                <img src="download (3).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (5).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (3).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (5).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (3).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (5).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (3).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+
+         <h2 style="margin-left: 20px; margin-top: 35px;">DELL CORE I 7</h2>
+             <div class="container2">
+            <div class="inner-container2">
+                <img src="download (7).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (9).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (7).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (9).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (7).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (9).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (7).jpg" alt="photos">
+                <p>Dell Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+
+         <h2 style="margin-left: 20px; margin-top: 35px;">HP CORE I 5</h2>
+             <div class="container2">
+            <div class="inner-container2">
+                <img src="download (4).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (6).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (4).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (6).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (4).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (6).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (4).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i5 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+
+           <h2 style="margin-left: 20px; margin-top: 35px;">HP CORE I 7</h2>
+             <div class="container2">
+            <div class="inner-container2">
+                <img src="download (6).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (4).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (6).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (4).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (6).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (4).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="download (6).jpg" alt="photos">
+                <p>HP Latitude E5570 (Core i7 6th Gen 8GB+256GB)</p>
+                <p>Price: $200</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+
+          <h2 style="margin-left: 20px; margin-top: 35px;">DELL MACKBOOK AIR/PRO</h2>
+             <div class="container2">
+            <div class="inner-container2">
+                <img src="images.jpg" alt="photos">
+                <p>MacBook Air (M4, 13‑inch, 256 GB)</p>
+                <p>Price: $1000</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (1).jpg" alt="photos">
+                <p>MacBook Pro (14 inch, M4, 16 GB /512 GB)</p>
+                <p>Price: $800</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (2).jpg" alt="photos">
+                <p>MacBook Air (M4, 13‑inch, 512 GB)</p>
+                <p>Price: $1000</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (3).jpg" alt="photos">
+                <p>MacBook Pro (16 inch, M4 Max, 36 GB/ 1 TB)</p>
+                <p>Price: $900</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (4).jpg" alt="photos">
+                <p>Dell Alienware 18 (Area 51 gaming)</p>
+                <p>Price: $700</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (5).jpg" alt="photos">
+                <p>Dell Alienware 18 (Area 51 gaming)</p>
+                <p>Price: $2000</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (6).jpg" alt="photos">
+                <p>Dell Alienware 18 (Area 51 gaming)</p>
+                <p>Price: $1000</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+           <h2 style="margin-left: 20px; margin-top: 35px;">HP ELITE MACKBOOK/PRO</h2>
+             <div class="container2">
+            <div class="inner-container2">
+                <img src="images.jpg" alt="photos">
+                <p>MacBook Air (M4, 13‑inch, 256 GB)</p>
+                <p>Price: $1000</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (2).jpg" alt="photos">
+                <p>MacBook Pro (14 inch, M4, 16 GB /512 GB)</p>
+                <p>Price: $800</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (3).jpg" alt="photos">
+                <p>MacBook Air (M4, 13‑inch, 512 GB)</p>
+                <p>Price: $1000</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (1).jpg" alt="photos">
+                <p>MacBook Pro (16 inch, M4 Max, 36 GB/ 1 TB)</p>
+                <p>Price: $900</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (6).jpg" alt="photos">
+                <p>HP Alienware 18 (Area 51 gaming)</p>
+                <p>Price: $700</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (5).jpg" alt="photos">
+                <p>HP Alienware 18 (Area 51 gaming)</p>
+                <p>Price: $2000</p>
+                <button>Shop Now</button>
+            </div>
+              <div class="inner-container2">
+                <img src="images (4).jpg" alt="photos">
+                <p>HP Alienware 18 (Area 51 gaming)</p>
+                <p>Price: $1000</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+
+        <div class="container3">
+            <div class="inner-container3">
+                <h4>Special Offer Limited Time Only!</h4>
+                <p>Flat 10% OFF on Mens Wear On purchases above $500 Dell ,Hp laptop,Mackbook</p>
+                <button>Shop Now</button>
+            </div>
+            <div>
+                <img src="download (8).jpg" alt="photos" style="width: 100%; height: 300px; object-fit: cover; margin-top: 20px; border-radius: 10px;">
+            </div>
+        </div>
+    </section> 
+    
+       <footer class="container4" >
+        <div class="footer-col">
+            <h2>SHOP LAPTOP</h2>
+            <p style="margin-top: 20px;"> Folgen Sie uns in den sozialen Medien </p>
+            <div class="logo">
+              <i class="fa-brands fa-tiktok"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-pinterest-p"></i>
+            </div>
+        </div>
+        
+        <div>
+            <h4>Populäre Kategorien</h4>
+            <ul>
+                <li><a href="#"> Household & Living</a></li>
+                <li><a href="#"> Collect & Rare</a></li>
+                <li><a href="#"> Clothing & Accessories</a></li>
+                <li><a href="#"> Model making & hobby</a></li>
+            </ul>
+        </div>
+          <div>
+            <h4> Information</h4>
+            <ul>
+                <li><a href="#">  Kontakt</a></li>
+                <li><a href="#"> Hilfe</a></li>
+                <li><a href="#"> Häufig gestellte Fragen</a></li>
+                <li><a href="#"> Impressum</a></li>
+            </ul>
+        </div>
+        
+    </footer>
+        <div style="text-align: center; padding: 10px; background-color: black; color: white;">
+            <p>&copy; 2024 User Panel. All rights reserved.</p>
+</body>
+</html>
