@@ -179,3 +179,136 @@ let size = 0;
   let fruits = ["Mango", "Banana", "Apple", "Orange"];
   let citrus = fruits.slice(1, 3);
   console.log(citrus); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Artimetic Operators
+ /*
+ let a = 10;
+ let b = 3;
+ 
+ console.log("a + b =" ,  a + b);
+ console.log("a - b =" ,  a - b);
+ console.log("a * b =" ,  a * b);
+ console.log("a / b =" ,  a / b); 
+ */
+
+ //Comparison Operators
+ /*
+ let a = 10;
+ let b = 5;
+  console.log("a > b =", a > b);
+  console.log("a < b =", a < b);
+  console.log("a >= b =", a >= b);
+  console.log("a <= b =", a <= b);
+  console.log("a == b =", a == b);
+  console.log("a != b =", a != b);
+  console.log("a === b =", a === b);
+  console.log("a !== b =", a !== b);
+  */
+
+  //Logical Operators 
+  /*
+  let x = 10;
+  let y = 5; 
+  console.log("x > 5 && y < 10 =", x > 5 && y < 10);
+  console.log("x > 15 || y < 10 =", x > 15 || y < 10);
+  console.log("!(x > 5) =", !(x > 5)); 
+  */ 
+
+
+ //conditional Statements
+ /*
+ let age = 20;
+ if (age <= 17) {
+  console.log("You are a minor.");
+ }
+ else {
+ console.log("You are an adult.");
+ }
+  */
+
+  //if-else 
+   /*
+    let marks = 89;
+    if (marks >= 90){
+      console.log("Grade: A");
+    }
+    else if (marks >= 75){
+      console.log("Grade: B");
+    }
+    else if (marks >= 60){
+      console.log ("Grade: C");
+    }
+   else if (marks >= 40){
+    console.log("Grade: D");
+   }
+   else {
+    console.log("Grade: F");
+   }
+   */
+
+
+
+
+    //Guess the Magic Number Game
+   
+    let magicNum = 17;
+   
+   let userNum = prompt("Guess the magic number (between 1 to 50):");
+      
+   if (userNum == magicNum) {
+    console.log("Congratulations! You guessed the magic number.");
+   }
+   else if ( userNum < magicNum){
+    console.log("Too low! Try a bigger number.");
+   }
+   else if (userNum > magicNum){
+    console.log("Too high! Try a smaller number."); 
+   }
+   if (userNum > 25 && userNum % 2 === 0) {
+    console.log("Hint: It's smaller than 25 and odd number.");
+  }
+    
+
+  // functions and Methods
+  
+  function myfunction(name){
+    console.log("name =", name);
+  } 
+  myfunction("Haseeb");
+  myfunction("Ali");
+  myfunction("Malik"); 
+  
+
+  function sum(a, b){
+    s = a + b;
+    return s;
+  } 
+  let result = sum(5, 10);
+  console.log("Sum =", result);
+
+  let result2 = sum(20, 30);
+  console.log("Sum =", result2);
+
+
+ 
+  function myfunction(mes){
+    console.log("message =", mes);
+  }
+   myfunction("Hello World!");
