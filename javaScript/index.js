@@ -267,7 +267,7 @@ let size = 0;
 
 
     //Guess the Magic Number Game
-   
+   /*
     let magicNum = 17;
    
    let userNum = prompt("Guess the magic number (between 1 to 50):");
@@ -284,10 +284,10 @@ let size = 0;
    if (userNum > 25 && userNum % 2 === 0) {
     console.log("Hint: It's smaller than 25 and odd number.");
   }
-    
+    */
 
   // functions and Methods
-  
+  /*
   function myfunction(name){
     console.log("name =", name);
   } 
@@ -312,3 +312,50 @@ let size = 0;
     console.log("message =", mes);
   }
    myfunction("Hello World!");
+   */
+
+   
+
+
+function getDayMessage() {
+    let input = prompt("Enter a number between 1 and 7:");
+    let NumberValue = Number(input); 
+
+   
+
+    switch (NumberValue) {
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        case 3:
+            console.log("Tuesday");
+            break;
+        case 4:
+            console.log("Wednesday");
+            break;
+        case 5:
+            console.log("Thursday");
+            break;
+        case 6:
+            console.log("Friday");
+            break;
+        case 7:
+            console.log("Saturday");
+            break;
+        default:
+            console.log("Invalid Day Number");
+    }
+}
+
+getDayMessage();
+
+let score = 72;     
+let scoreInput = prompt("Enter your score ");
+ 
+let result = scoreInput >= 70 ? "Pass" : "Fail";
+alert(result);
+
+
