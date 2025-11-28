@@ -1,7 +1,18 @@
 function getCalculation() {
     let item = document.getElementById("item").value;
-    let quantity = Number(document.getElementById("quantity").value);
-
+    let quantity = document.getElementById("quantity").value;
+    
+    if (item === "") {
+        document.getElementById("output").innerHTML=
+        "<p><b>Please Select a Item</b></p>"
+        return;
+    }
+    if (quantity === "") {
+        document.getElementById("output").innerHTML=
+        "<p><b>Please Enter a Quantity</b></p>"
+        return;
+    }
+    quantity =Number(quantity);
     let price 
     switch(item){
         case "apple":
