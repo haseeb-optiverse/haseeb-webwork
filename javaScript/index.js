@@ -316,7 +316,7 @@ let size = 0;
 
    
 
-
+/*
 function getDayMessage() {
     let input = prompt("Enter a number between 1 and 7:");
     let NumberValue = Number(input); 
@@ -357,5 +357,5 @@ let scoreInput = prompt("Enter your score ");
  
 let result = scoreInput >= 70 ? "Pass" : "Fail";
 alert(result);
-
+*/
 
