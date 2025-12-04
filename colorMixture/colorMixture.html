@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixture</title>
+    <style>
+       body{
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+       }
+       .container{
+        width: 400px;
+        text-align: center;
+        background-color: aliceblue;
+        border-radius: 10px;
+        padding: 25px;
+       }
+       .color_box{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+       }
+       .box{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        border: 2px solid;
+       }
+       select{
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid;
+       }
+        button{
+        width: 50%;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid;
+       }
+       #message{
+        padding: 12px;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Color Mixture</h2>
+
+        <div class="color_box">
+            <div id="box1" class="box"></div>
+            <div id="box2" class="box"></div>
+            <div id="resultbox" class="box"></div>
+        </div>
+
+        <select id="color1">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="pink">Pink</option>
+        </select>
+
+         <select id="color2">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="pink">Pink</option>
+        </select>
+
+        <button onclick="mixcolor()">Mix Colors</button>
+         <button onclick="resetAll()">Reset</button>
+
+
+        <div id="message"></div>
+        <div id="count">Mix Count: </div>
+    </div>
+    <script src="colorMixture.js"></script>
+</body>
+</html>
