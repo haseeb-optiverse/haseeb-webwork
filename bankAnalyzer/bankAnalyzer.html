@@ -240,7 +240,7 @@
 
 function showRichest() {
   let richestName = "";
-  let highestBalance = 0;
+  let highestBalance = 0; 
 
   for (let i = 0; i < customers.length; i++) {
     let totalBalance = 0;
@@ -257,8 +257,110 @@ function showRichest() {
 
   document.getElementById("output").innerHTML =
     "Richest Customer: " + richestName + "\nTotal Balance: " + highestBalance;
+}  
+
+
+      function showRisk() {
+  let output = "";
+
+  for (let i = 0; i < customers.length; i++) {
+    let isRisky = false;
+
+    for (let j = 0; j < customers[i].accounts.length; j++) {
+      let account = customers[i].accounts[j];
+
+      
+      if (account.balance < 5000) {
+        isRisky = true;
+      }
+
+     
+      let negativeCount = 0;
+
+      for (let k = 0; k < account.transactions.length; k++) {
+        if (account.transactions[k] < 0) {
+          negativeCount++;
+        }
+      }
+
+      if (negativeCount > 2) {
+        isRisky = true;
+      }
+    }
+
+    if (isRisky) {
+      output += customers[i].name + "\n";
+    }
+  }
+
+  document.getElementById("output").innerText =
+    "Customers at Financial Risk:\n\n" + output;
 }
 
+  
+function showTransformed() {
+  let output = "";
+
+  for (let i = 0; i < customers.length; i++) {
+
+    let total = 0;
+
+    for (let j = 0; j < customers[i].accounts.length; j++) {
+      total += customers[i].accounts[j].balance;
+    }
+
+    output += customers[i].name + "\n";
+    output += "Total Balance: " + total + "\n";
+
+    for (let j = 0; j < customers[i].accounts.length; j++) {
+      let dep = 0;
+      let wit = 0;
+      let t = customers[i].accounts[j].transactions;
+
+      for (let k = 0; k < t.length; k++) {
+        if (t[k] > 0) dep += t[k];
+        else wit += -t[k];
+      }
+
+      output +=
+        customers[i].accounts[j].type +
+        " => Deposits: " + dep +
+        ", Withdrawals: " + wit + "\n";
+    }
+
+    output += "\n";
+  }
+
+  document.getElementById("output").innerText = output;
+}
+   
+function showStatus() {
+  let output = "";
+
+  for (let i = 0; i < customers.length; i++) {
+    let total = 0;
+
+    for (let j = 0; j < customers[i].accounts.length; j++) {
+      total += customers[i].accounts[j].balance;
+    }
+
+    let status = "";
+
+    if (total >= 20000) {
+      status = "Stable";
+    } else if (total >= 10000) {
+      status = "Warning";
+    } else {
+      status = "Critical";
+    }
+
+    output += customers[i].name +
+      " | Balance: " + total +
+      " | Status: " + status + "\n" + "\n";
+  }
+
+  document.getElementById("output").innerText = output;
+}
 
 
 
