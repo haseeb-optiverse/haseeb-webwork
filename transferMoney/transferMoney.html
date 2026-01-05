@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bank Transfer System</title>
+
+<style>
+  body {
+    background: #f1f5f9;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    width: 450px;
+    margin: 60px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e293b;
+  }
+
+  .card {
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+  }
+
+  input {
+     width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #1e40af;
+  }
+
+  .message {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .transactions {
+    margin-top: 15px;
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: pre-line;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Money Transfer System</h2>
+
+  <div class="card">
+   <div> <strong>Haseeb</strong></div>
+   <div> Account: Savings</div>
+    Balance: Rs <span id="haseebBal">30000</span>
+  </div>
+
+  <div class="card">
+    <div><strong>Riyyan</strong></div>
+    <div>Account: Savings</div>
+    Balance: Rs <span id="riyyanBal">30000</span>
+  </div>
+
+  <select id="sender">
+    <option value="">Select Sender</option>
+    <option value="haseeb">Haseeb</option>
+    <option value="riyyan">Riyyan</option>
+  </select>
+
+  <input type="number" id="amount" placeholder="Enter amount">
+
+  <button onclick="transferMoney()">Transfer</button>
+
+  <div class="message" id="message"></div>
+
+  <div class="transactions" id="transactions">
+    Transactions:
+  </div>
+</div>
+
+<script>
+  let haseebBalance = 30000;
+  let riyyanBalance = 30000;
+
+  function transferMoney() {
+    let sender = document.getElementById("sender").value;
+    let amount = Number(document.getElementById("amount").value);
+    let msg = document.getElementById("message");
+
+    if (sender === "" || amount <= 0) {
+      msg.innerText = "Please select sender & valid amount";
+      msg.style.color = "red";
+      return;
+    }
+
+    if (sender === "haseeb") {
+      if (haseebBalance < amount) {
+        msg.innerText = "Haseeb: Insufficient Balance";
+        msg.style.color = "red";
+        return;
+      }
+      haseebBalance -= amount;
+      riyyanBalance += amount;
+      document.getElementById("transactions").innerText +=
+        `\nHaseeb sent Rs ${amount} to Riyyan`;
+    }
+
+    if (sender === "riyyan") {
+      if (riyyanBalance < amount) {
+        msg.innerText = "Riyyan: Insufficient Balance";
+        msg.style.color = "red";
+        return;
+      }
+      riyyanBalance -= amount;
+      haseebBalance += amount;
+      document.getElementById("transactions").innerText +=
+        `\nRiyyan sent Rs ${amount} to Haseeb`;
+    }
+
+    document.getElementById("haseebBal").innerText = haseebBalance;
+    document.getElementById("riyyanBal").innerText = riyyanBalance;
+
+    msg.innerText = "Transfer Successful";
+    msg.style.color = "green";
+
+    document.getElementById("amount").value = "";
+    document.getElementById("sender").value = "";
+  }
+</script>
+
+</body>
+</html>
