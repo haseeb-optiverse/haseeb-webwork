@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Yearly Budget Analyzer</title>
+    <style>
+      body {
+        background: #f3f4f6;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 18px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #0473ea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      button:hover {
+        background-color: #005fc5;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Country Yearly Budget Analyzer</h1>
+
+    <div class="container">
+      <button onclick="analyzeBudget()">Analyze Budget</button>
+      <div id="output"></div>
+    </div>
+
+    <script>
+      const budget = [
+        { sector: "Education", allocated: 300, spent: 280 },
+        { sector: "Health", allocated: 250, spent: 270 },
+        { sector: "Defense", allocated: 400, spent: 390 },
+        { sector: "Infrastructure", allocated: 350, spent: 420 },
+      ];
+      function calculateSectorResult(sector) {
+        if (sector.spent < sector.allocated) {
+          return "Surplus";
+        } else if (sector.spent === sector.allocated) {
+          return "Balanced";
+        } else {
+          return "Deficit";
+        }
+      }
+
+      function analyzeBudget() {
+        let output = document.getElementById("output");
+        output.innerHTML = "";
+
+        let totalAllocated = 0;
+        let totalSpent = 0;
+        let highestOverspending = "";
+        let maxDeficit = 0;
+        let efficientCount = 0;
+        let inefficientCount = 0;
+
+        budget.forEach((sector) => {
+          totalAllocated += sector.allocated;
+          totalSpent += sector.spent;
+
+          let result = calculateSectorResult(sector);
+          let message = "";
+
+          switch (result) {
+            case "Surplus":
+              message = "Efficient Spending";
+              efficientCount++;
+              break;
+
+            case "Balanced":
+              message = "Perfect Utilization";
+              efficientCount++;
+              break;
+
+            case "Deficit":
+              message = "Over Spending";
+              inefficientCount++;
+              const deficit = sector.spent - sector.allocated;
+              if (deficit > maxDeficit) {
+                maxDeficit = deficit;
+                highestOverspending = sector.sector;
+              }
+              break;
+          }
+
+          output.innerHTML += `
+        <div style="background:white;padding:15px;margin-bottom:10px;border-radius:8px;">
+          <strong>Sector:</strong> ${sector.sector}<br>
+          <strong>Allocated:</strong> ${sector.allocated}<br>
+          <strong>Spent:</strong> ${sector.spent}<br>
+          <strong>Result:</strong> ${result}<br>
+          <strong>Message:</strong> ${message}
+        </div>
+      `;
+        });
+
+        const overallResult =
+          totalSpent > totalAllocated
+            ? "Overall Deficit"
+            : totalSpent < totalAllocated
+            ? "Overall Surplus"
+            : "Balanced Budget";
+
+        output.innerHTML += `
+      <div style="background:white;padding:15px;margin-top:20px;border-radius:8px;">
+        <h3>Overall Summary</h3>
+        <p><strong>Total Allocated:</strong> ${totalAllocated}</p>
+        <p><strong>Total Spent:</strong> ${totalSpent}</p>
+        <p><strong>Status:</strong> ${overallResult}</p>
+        <p><strong>Highest Overspending Sector:</strong> ${
+          highestOverspending || "None"
+        }</p>
+        <p><strong>Efficient Sectors:</strong> ${efficientCount}</p>
+        <p><strong>Inefficient Sectors:</strong> ${inefficientCount}</p>
+      </div>
+    `;
+      }
+    </script>
+  </body>
+</html>
+
+
